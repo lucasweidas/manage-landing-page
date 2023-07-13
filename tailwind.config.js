@@ -19,6 +19,9 @@ module.exports = {
           400: 'hsl(227, 12%, 61%)',
         },
       },
+      backgroundImage: {
+        overlay: 'linear-gradient(to bottom, hsla(0, 0%, 0%, 0.1) 30%, hsla(0, 0%, 0%, 0.5))',
+      },
       width: {
         5.1: '1.313rem',
         6.1: '1.563rem',
