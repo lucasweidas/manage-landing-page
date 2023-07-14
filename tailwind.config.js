@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: 'var(--font-be-vietnam-pro)',
+        sans: ['var(--font-be-vietnam-pro)'],
+      },
+      fontSize: {
+        '2sm': '0.938rem',
       },
       colors: {
         red: {
@@ -21,15 +24,36 @@ module.exports = {
       },
       backgroundImage: {
         overlay: 'linear-gradient(to bottom, hsla(0, 0%, 0%, 0.1) 30%, hsla(0, 0%, 0%, 0.5))',
+        'simplify-sm': 'url(/images/bg-simplify-section-mobile.svg)',
+      },
+      backgroundPosition: {
+        'left-center': 'left center',
       },
       width: {
         5.1: '1.313rem',
         6.1: '1.563rem',
+        18: '4.5rem',
         36.2: '9.125rem',
       },
       height: {
         4.5: '1.125rem',
         5.5: '1.375rem',
+        18: '4.5rem',
+      },
+      margin: {
+        18: '4.5rem',
+      },
+      borderRadius: {
+        '2.5xl': '1.25rem',
+      },
+      flex: {
+        'carousel-item': '1 0 100%',
+      },
+      grayscale: {
+        20: '20%',
+      },
+      transitionProperty: {
+        filter: 'filter',
       },
     },
   },
