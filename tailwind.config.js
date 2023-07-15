@@ -55,6 +55,19 @@ module.exports = {
       transitionProperty: {
         filter: 'filter',
       },
+      animation: {
+        'signed-up': 'signed-up 1000ms ease-in-out',
+      },
+      keyframes: {
+        'signed-up': {
+          '35%, 65%': {
+            clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
+          },
+          '100%': {
+            clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)',
+          },
+        },
+      },
     },
   },
   plugins: [],
