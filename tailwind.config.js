@@ -8,6 +8,7 @@ module.exports = {
       },
       fontSize: {
         '2sm': '0.938rem',
+        '3.5xl': '2rem',
       },
       colors: {
         red: {

@@ -4,7 +4,7 @@ import { Carousel } from './carousel';
 export function Main() {
   return (
     <main>
-      <section className="relative">
+      <section className="relative mx-auto max-w-xl">
         <Image
           src="/images/bg-tablet-pattern.svg"
           alt=""
@@ -14,10 +14,10 @@ export function Main() {
           aria-hidden="true"
         />
         <div className="px-4">
-          <Image src="/images/illustration-intro.svg" alt="" width={580} height={525} priority aria-hidden="true" />
+          <Image priority src="/images/illustration-intro.svg" alt="" width={580} height={525} className="mx-auto" aria-hidden="true" />
         </div>
         <div className="text-center px-8">
-          <h1 className="text-blue-900 font-bold text-4xl leading-snug">Bring everyone together to build better products.</h1>
+          <h1 className="text-blue-900 font-bold text-3.5xl xsm:text-4xl leading-snug">Bring everyone together to build better products.</h1>
           <p className="text-gray-400 !leading-loose mt-2 text-2sm xsm:text-base">
             Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.
           </p>
@@ -29,7 +29,7 @@ export function Main() {
           </a>
         </div>
       </section>
-      <section className="mt-24 relative">
+      <section className="mt-24 relative mx-auto max-w-xl">
         <Image
           src="/images/bg-tablet-pattern.svg"
           alt=""
@@ -39,7 +39,7 @@ export function Main() {
           aria-hidden="true"
         />
         <div className="px-8 text-center">
-          <h2 className="text-blue-900 font-bold text-3xl">What’s different about Manage?</h2>
+          <h2 className="text-blue-900 font-bold text-2xl xsm:text-3xl">What’s different about Manage?</h2>
           <p className="text-sm text-gray-400 mt-6 leading-loose">
             Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.
           </p>
@@ -79,8 +79,8 @@ export function Main() {
           </ul>
         </div>
       </section>
-      <section className="text-center mt-18 px-4">
-        <h2 className="text-blue-900 font-bold text-3xl">What they’ve said</h2>
+      <section className="text-center mt-18 px-4 mx-auto max-w-xl">
+        <h2 className="text-blue-900 font-bold text-2xl xsm:text-3xl">What they’ve said</h2>
         <Carousel />
         <a
           href="#"
@@ -90,7 +90,7 @@ export function Main() {
         </a>
       </section>
       <section className="mt-11 bg-red-500 text-center px-8 py-24 bg-simplify-sm bg-no-repeat bg-left-center">
-        <h2 className="text-4xl font-bold text-white leading-snug">Simplify how your team works today.</h2>
+        <h2 className="text-3.5xl xsm:text-4xl font-bold text-white leading-snug">Simplify how your team works today.</h2>
         <a
           href="#"
           className="bg-white w-36 h-12 font-bold text-red-500 text-sm rounded-full flex items-center justify-center mx-auto mt-6 hover:brightness-125 hover:grayscale-20 focus-visible:brightness-125 focus-visible:grayscale-20 focus-visible:ring-2 focus-visible:ring-blue-1000 transition-filter outline-none"
