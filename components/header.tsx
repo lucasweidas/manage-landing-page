@@ -34,7 +34,7 @@ function Nav() {
             <use xlinkHref="#manage-logo" />
           </svg>
         </a>
-        {device === 'mobile' && (
+        {device === 'mobile' && !isOpen && (
           <button className="text-blue-900" aria-label="Open navigation menu" onClick={toggleNav}>
             <svg className="w-6.1 h-4.5" aria-hidden="true">
               <use xlinkHref="#hamburger-icon" />
