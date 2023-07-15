@@ -28,8 +28,8 @@ export function NewsletterForm() {
             type="text"
             id="email"
             placeholder="Updates in your inbox…"
-            className={`text-sm text-blue-900 placeholder:text-gray-400 px-6 py-3 rounded-full w-full focus-visible:ring-2 outline-none ring-red-500 relative ${
-              errors.email ? 'focus-visible:ring-red-600' : ''
+            className={`text-sm text-blue-900 placeholder:text-gray-400 px-6 py-3 rounded-full w-full focus-visible:ring-2 outline-none focus-visible:ring-red-500 relative ${
+              errors.email ? 'focus-visible:!ring-red-600' : ''
             }`}
             aria-label="Email"
             {...register('email')}
@@ -45,7 +45,7 @@ export function NewsletterForm() {
         </div>
         <button
           type="submit"
-          className="text-sm text-white bg-red-500 py-3 px-7 font-bold rounded-full hover:brightness-125 hover:grayscale-20 focus-visible:brightness-125 focus-visible:grayscale-20 transition-filter xsm:self-start"
+          className="text-sm text-white bg-red-500 py-3 px-7 font-bold rounded-full hover:brightness-125 hover:grayscale-20 focus-visible:brightness-125 focus-visible:grayscale-20 transition-filter outline-none focus-visible:ring-2 focus-visible:ring-neutral-50 xsm:self-start"
         >
           Go
         </button>

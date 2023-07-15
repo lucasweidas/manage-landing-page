@@ -10,7 +10,7 @@ export function Main() {
         </div>
         <div className="text-center px-8">
           <h1 className="text-blue-900 font-bold text-4xl leading-snug">Bring everyone together to build better products.</h1>
-          <p className="text-gray-400 leading-loose mt-2 text-2sm">
+          <p className="text-gray-400 !leading-loose mt-2 text-2sm xsm:text-base">
             Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.
           </p>
           <a
@@ -31,9 +31,9 @@ export function Main() {
         <div className="px-4 mt-14">
           <ul className="flex flex-col gap-11">
             <li className="grid gap-4">
-              <div className="bg-red-50 flex gap-4 items-center rounded-l-2.5xl  -mr-4">
-                <span className="bg-red-500 font-bold text-white w-16 h-10 flex items-center justify-center rounded-2.5xl">01</span>
-                <h3 className="font-bold text-blue-900 text-2sm">Track company-wide progress</h3>
+              <div className="bg-red-50 flex gap-4 items-center rounded-l-2.5xl -mr-4">
+                <span className="bg-red-500 font-bold text-white w-16 h-full flex items-center justify-center rounded-2.5xl shrink-0">01</span>
+                <h3 className="font-bold text-blue-900 pr-4 py-2">Track company-wide progress</h3>
               </div>
               <p className="text-sm text-gray-400 leading-loose">
                 See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of
@@ -41,9 +41,9 @@ export function Main() {
               </p>
             </li>
             <li className="grid gap-4">
-              <div className="bg-red-50 flex gap-4 items-center rounded-l-2.5xl  -mr-4">
-                <span className="bg-red-500 font-bold text-white w-16 h-10 flex items-center justify-center rounded-2.5xl">02</span>
-                <h3 className="font-bold text-blue-900 text-2sm">Advanced built-in reports</h3>
+              <div className="bg-red-50 flex gap-4 items-center rounded-l-2.5xl -mr-4">
+                <span className="bg-red-500 font-bold text-white w-16 h-full flex items-center justify-center rounded-2.5xl shrink-0">02</span>
+                <h3 className="font-bold text-blue-900 pr-4 py-2">Advanced built-in reports</h3>
               </div>
               <p className="text-sm text-gray-400 leading-loose">
                 Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need to
@@ -51,9 +51,9 @@ export function Main() {
               </p>
             </li>
             <li className="grid gap-4">
-              <div className="bg-red-50 flex gap-4 items-center rounded-l-2.5xl  -mr-4">
-                <span className="bg-red-500 font-bold text-white w-16 h-10 flex items-center justify-center rounded-2.5xl">03</span>
-                <h3 className="font-bold text-blue-900 text-2sm">Everything you need in one place</h3>
+              <div className="bg-red-50 flex gap-4 items-center rounded-l-2.5xl -mr-4">
+                <span className="bg-red-500 font-bold text-white w-16 h-full flex items-center justify-center rounded-2.5xl shrink-0">03</span>
+                <h3 className="font-bold text-blue-900 pr-4 py-2">Everything you need in one place</h3>
               </div>
               <p className="text-sm text-gray-400 leading-loose">
                 Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team
