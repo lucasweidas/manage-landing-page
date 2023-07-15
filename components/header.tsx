@@ -38,7 +38,7 @@ function Nav() {
         </a>
         {device === 'mobile' && !isOpen && (
           <button
-            className="text-blue-900 hover:text-red-500 focus-visible:text-red-500 transition-colors"
+            className="text-blue-900 hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none"
             aria-label="Open navigation menu"
             onClick={toggleNav}
           >
@@ -52,7 +52,7 @@ function Nav() {
         <div className="fixed bg-overlay w-full top-0 left-0 min-h-screen px-6 pt-10 gap-10 flex flex-col z-50" onClick={handleOverlayClick}>
           {device === 'mobile' && (
             <button
-              className="text-blue-900 self-end hover:text-red-500 focus-visible:text-red-500 transition-colors"
+              className="text-blue-900 self-end hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none"
               aria-label="Close navigation menu"
               onClick={toggleNav}
             >
@@ -63,27 +63,27 @@ function Nav() {
           )}
           <ul className="bg-white flex flex-col gap-7 p-10 items-center rounded-md text-blue-900 font-bold">
             <li>
-              <a href="#" className="hover:text-gray-400 focus-visible:text-gray-400 transition-colors">
+              <a href="#" className="hover:text-gray-400 focus-visible:text-gray-400 transition-colors motion-reduce:transition-none">
                 Pricing
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-gray-400 focus-visible:text-gray-400 transition-colors">
+              <a href="#" className="hover:text-gray-400 focus-visible:text-gray-400 transition-colors motion-reduce:transition-none">
                 Product
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-gray-400 focus-visible:text-gray-400 transition-colors">
+              <a href="#" className="hover:text-gray-400 focus-visible:text-gray-400 transition-colors motion-reduce:transition-none">
                 About Us
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-gray-400 focus-visible:text-gray-400 transition-colors">
+              <a href="#" className="hover:text-gray-400 focus-visible:text-gray-400 transition-colors motion-reduce:transition-none">
                 Careers
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-gray-400 focus-visible:text-gray-400 transition-colors">
+              <a href="#" className="hover:text-gray-400 focus-visible:text-gray-400 transition-colors motion-reduce:transition-none">
                 Community
               </a>
             </li>

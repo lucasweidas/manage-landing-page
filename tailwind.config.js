@@ -61,6 +61,7 @@ module.exports = {
       },
       animation: {
         'signed-up': 'signed-up 1000ms ease-in-out',
+        'signed-up-reduce': 'signed-up-reduce 1000ms linear',
       },
       keyframes: {
         'signed-up': {
@@ -69,6 +70,14 @@ module.exports = {
           },
           '100%': {
             clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)',
+          },
+        },
+        'signed-up-reduce': {
+          '99%': {
+            visibility: 'visible',
+          },
+          '100%': {
+            visibility: 'hidden',
           },
         },
       },

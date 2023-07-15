@@ -23,7 +23,7 @@ export function Main() {
           </p>
           <a
             href="#"
-            className="bg-red-500 w-36 h-12 font-bold text-white text-sm rounded-full flex items-center justify-center mx-auto mt-7 shadow-lg shadow-red-500/50 hover:brightness-125 hover:grayscale-20 focus-visible:brightness-125 focus-visible:grayscale-20 focus-visible:ring-2 focus-visible:ring-blue-1000 transition-filter outline-none"
+            className="bg-red-500 w-36 h-12 font-bold text-white text-sm rounded-full flex items-center justify-center mx-auto mt-7 shadow-lg shadow-red-500/50 hover:brightness-125 hover:grayscale-20 focus-visible:brightness-125 focus-visible:grayscale-20 focus-visible:ring-2 focus-visible:ring-blue-1000 transition-filter outline-none motion-reduce:transition-none"
           >
             Get Started
           </a>
@@ -84,7 +84,7 @@ export function Main() {
         <Carousel />
         <a
           href="#"
-          className="bg-red-500 w-36 h-12 font-bold text-white text-sm rounded-full flex items-center justify-center mx-auto mt-12 shadow-lg shadow-red-500/50 hover:brightness-125 hover:grayscale-20 focus-visible:brightness-125 focus-visible:grayscale-20 focus-visible:ring-2 focus-visible:ring-blue-1000 transition-filter outline-none"
+          className="bg-red-500 w-36 h-12 font-bold text-white text-sm rounded-full flex items-center justify-center mx-auto mt-12 shadow-lg shadow-red-500/50 hover:brightness-125 hover:grayscale-20 focus-visible:brightness-125 focus-visible:grayscale-20 focus-visible:ring-2 focus-visible:ring-blue-1000 transition-filter outline-none motion-reduce:transition-none"
         >
           Get Started
         </a>
@@ -93,7 +93,7 @@ export function Main() {
         <h2 className="text-3.5xl xsm:text-4xl font-bold text-white leading-snug">Simplify how your team works today.</h2>
         <a
           href="#"
-          className="bg-white w-36 h-12 font-bold text-red-500 text-sm rounded-full flex items-center justify-center mx-auto mt-6 hover:brightness-125 hover:grayscale-20 focus-visible:brightness-125 focus-visible:grayscale-20 focus-visible:ring-2 focus-visible:ring-blue-1000 transition-filter outline-none"
+          className="bg-white w-36 h-12 font-bold text-red-500 text-sm rounded-full flex items-center justify-center mx-auto mt-6 hover:brightness-125 hover:grayscale-20 focus-visible:brightness-125 focus-visible:grayscale-20 focus-visible:ring-2 focus-visible:ring-blue-1000 transition-filter outline-none motion-reduce:transition-none"
         >
           Get Started
         </a>

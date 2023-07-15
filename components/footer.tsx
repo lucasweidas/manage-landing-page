@@ -8,39 +8,39 @@ export function Footer() {
         <nav className="grid xsm:grid-cols-2 justify-items-center gap-4">
           <ul className="flex flex-col gap-4 text-sm text-center xsm:text-start">
             <li>
-              <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors">
+              <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none">
                 Home
               </a>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors">
+              <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none">
                 Pricing
               </a>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors">
+              <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none">
                 Products
               </a>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors">
+              <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none">
                 About Us
               </a>
             </li>
           </ul>
           <ul className="flex flex-col gap-4 text-sm text-center xsm:text-start">
             <li>
-              <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors">
+              <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none">
                 Careers
               </a>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors">
+              <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none">
                 Community
               </a>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors">
+              <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none">
                 Privacy Policy
               </a>
             </li>
@@ -49,35 +49,55 @@ export function Footer() {
         <div>
           <ul className="flex gap-6 xsm:gap-8 items-center justify-center">
             <li>
-              <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors" aria-label="Facebook">
+              <a
+                href="#"
+                className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none"
+                aria-label="Facebook"
+              >
                 <svg className="w-6 h-6 xsm:w-8 xsm:h-8" aria-hidden="true">
                   <use xlinkHref="#social-facebook" />
                 </svg>
               </a>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors" aria-label="YouTube">
+              <a
+                href="#"
+                className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none"
+                aria-label="YouTube"
+              >
                 <svg className="w-6 h-6 xsm:w-8 xsm:h-8" aria-hidden="true">
                   <use xlinkHref="#social-youtube" />
                 </svg>
               </a>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors" aria-label="Twitter">
+              <a
+                href="#"
+                className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none"
+                aria-label="Twitter"
+              >
                 <svg className="w-6 h-5 xsm:w-8 xsm:h-7" aria-hidden="true">
                   <use xlinkHref="#social-twitter" />
                 </svg>
               </a>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors" aria-label="Pinterest">
+              <a
+                href="#"
+                className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none"
+                aria-label="Pinterest"
+              >
                 <svg className="w-6 h-6 xsm:w-8 xsm:h-8" aria-hidden="true">
                   <use xlinkHref="#social-pinterest" />
                 </svg>
               </a>
             </li>
             <li>
-              <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors" aria-label="Instagram">
+              <a
+                href="#"
+                className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none"
+                aria-label="Instagram"
+              >
                 <svg className="w-6 h-6 xsm:w-8 xsm:h-8" aria-hidden="true">
                   <use xlinkHref="#social-instagram" />
                 </svg>

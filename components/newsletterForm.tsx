@@ -35,7 +35,7 @@ export function NewsletterForm() {
             {...register('email')}
           />
           {isSubmitSuccessful && (
-            <span className="bg-red-500 w-full h-full px-6 py-3 text-sm absolute inset-0 rounded-full text-center text-white font-bold clip-signed-up animate-signed-up">
+            <span className="bg-red-500 w-full h-full px-6 py-3 text-sm absolute inset-0 rounded-full text-center text-white font-bold motion-reduce:invisible motion-safe:clip-signed-up motion-safe:animate-signed-up motion-reduce:animate-signed-up-reduce">
               Signed Up
             </span>
           )}
@@ -45,7 +45,7 @@ export function NewsletterForm() {
         </div>
         <button
           type="submit"
-          className="text-sm text-white bg-red-500 py-3 px-7 font-bold rounded-full hover:brightness-125 hover:grayscale-20 focus-visible:brightness-125 focus-visible:grayscale-20 transition-filter outline-none focus-visible:ring-2 focus-visible:ring-neutral-50 xsm:self-start"
+          className="text-sm text-white bg-red-500 py-3 px-7 font-bold rounded-full hover:brightness-125 hover:grayscale-20 focus-visible:brightness-125 focus-visible:grayscale-20 transition-filter outline-none focus-visible:ring-2 focus-visible:ring-neutral-50 xsm:self-start motion-reduce:transition-none"
         >
           Go
         </button>

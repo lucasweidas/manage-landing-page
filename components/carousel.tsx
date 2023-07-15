@@ -19,7 +19,7 @@ export function Carousel() {
 
   return (
     <div className="pt-24 overflow-hidden">
-      <ul className={`flex ${translateX} transition-transform duration-700 gap-4`}>
+      <ul className={`flex ${translateX} transition-transform duration-700 gap-4 motion-reduce:transition-none`}>
         <li className="flex-carousel-item px-6 bg-neutral-50 relative pt-16 pb-11 rounded-md">
           <Image src="/images/avatar-anisha.png" alt="Anisha Li" width={144} height={144} className="w-18 h-18 absolute -top-9 left-2/4 -translate-x-2/4" />
           <h3 className="font-bold text-blue-900" id="carousel-title-0">
@@ -69,7 +69,7 @@ export function Carousel() {
           <button
             key={id}
             role="tab"
-            className="appearance-none w-2.5 h-2.5 rounded-full border border-red-500 hover:border-blue-900 aria-selected:bg-red-500 focus-visible:border-blue-900 hover:aria-selected:border-red-500/80 hover:aria-selected:bg-red-500/80 cursor-pointer outline-none transition-colors"
+            className="appearance-none w-2.5 h-2.5 rounded-full border border-red-500 hover:border-blue-900 aria-selected:bg-red-500 focus-visible:border-blue-900 hover:aria-selected:border-red-500/80 hover:aria-selected:bg-red-500/80 cursor-pointer outline-none transition-colors motion-reduce:transition-none"
             aria-labelledby={`carousel-title-${id}`}
             aria-selected={selectedId === id}
             data-carousel-button={id}
