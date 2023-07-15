@@ -43,6 +43,9 @@ module.exports = {
       margin: {
         18: '4.5rem',
       },
+      screens: {
+        xsm: '375px',
+      },
       borderRadius: {
         '2.5xl': '1.25rem',
       },

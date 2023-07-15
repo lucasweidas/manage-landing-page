@@ -5,8 +5,8 @@ export function Footer() {
     <footer className="bg-blue-1000">
       <div className="px-6 pt-12 pb-7 grid gap-14">
         <NewsletterForm />
-        <nav className="grid grid-cols-2 justify-items-center gap-4">
-          <ul className="flex flex-col gap-4 text-sm">
+        <nav className="grid xsm:grid-cols-2 justify-items-center gap-4">
+          <ul className="flex flex-col gap-4 text-sm text-center xsm:text-start">
             <li>
               <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500">
                 Home
@@ -28,7 +28,7 @@ export function Footer() {
               </a>
             </li>
           </ul>
-          <ul className="flex flex-col gap-4 text-sm">
+          <ul className="flex flex-col gap-4 text-sm text-center xsm:text-start">
             <li>
               <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500">
                 Careers
@@ -47,38 +47,38 @@ export function Footer() {
           </ul>
         </nav>
         <div>
-          <ul className="flex gap-8 items-center justify-center">
+          <ul className="flex gap-6 xsm:gap-8 items-center justify-center">
             <li>
               <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500" aria-label="Facebook">
-                <svg className="w-8 h-8" aria-hidden="true">
+                <svg className="w-6 h-6 xsm:w-8 xsm:h-8" aria-hidden="true">
                   <use xlinkHref="#social-facebook" />
                 </svg>
               </a>
             </li>
             <li>
               <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500" aria-label="YouTube">
-                <svg className="w-8 h-8" aria-hidden="true">
+                <svg className="w-6 h-6 xsm:w-8 xsm:h-8" aria-hidden="true">
                   <use xlinkHref="#social-youtube" />
                 </svg>
               </a>
             </li>
             <li>
               <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500" aria-label="Twitter">
-                <svg className="w-8 h-7" aria-hidden="true">
+                <svg className="w-6 h-5 xsm:w-8 xsm:h-7" aria-hidden="true">
                   <use xlinkHref="#social-twitter" />
                 </svg>
               </a>
             </li>
             <li>
               <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500" aria-label="Pinterest">
-                <svg className="w-8 h-8" aria-hidden="true">
+                <svg className="w-6 h-6 xsm:w-8 xsm:h-8" aria-hidden="true">
                   <use xlinkHref="#social-pinterest" />
                 </svg>
               </a>
             </li>
             <li>
               <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500" aria-label="Instagram">
-                <svg className="w-8 h-8" aria-hidden="true">
+                <svg className="w-6 h-6 xsm:w-8 xsm:h-8" aria-hidden="true">
                   <use xlinkHref="#social-instagram" />
                 </svg>
               </a>

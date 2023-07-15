@@ -22,7 +22,7 @@ export function NewsletterForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="flex gap-2">
+      <div className="flex flex-col xsm:flex-row gap-2">
         <div className="flex-1 relative">
           <input
             type="text"
@@ -39,11 +39,13 @@ export function NewsletterForm() {
               Signed Up
             </span>
           )}
-          {errors.email && <p className="text-red-600 text-xs italic left-6 top-[calc(100%+0.5rem)] absolute">{errors.email.message}</p>}
+          {errors.email && (
+            <p className="text-red-600 text-xs italic max-xsm:ml-6 max-xsm:mt-2 xsm:left-6 xsm:top-[calc(100%+0.5rem)] xsm:absolute">{errors.email.message}</p>
+          )}
         </div>
         <button
           type="submit"
-          className="text-sm text-white bg-red-500 py-3 px-7 font-bold rounded-full hover:brightness-125 hover:grayscale-20 focus-visible:brightness-125 focus-visible:grayscale-20 transition-filter shrink-0 self-start"
+          className="text-sm text-white bg-red-500 py-3 px-7 font-bold rounded-full hover:brightness-125 hover:grayscale-20 focus-visible:brightness-125 focus-visible:grayscale-20 transition-filter xsm:self-start"
         >
           Go
         </button>
