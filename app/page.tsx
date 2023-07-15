@@ -1,3 +1,4 @@
+import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Main } from '@/components/main';
 
@@ -9,91 +10,6 @@ export default function Home() {
       <Footer />
       <SVGContainer />
     </>
-  );
-}
-
-function Footer() {
-  return (
-    <footer>
-      <div>
-        <a href="/" className="text-white" aria-label="Manage Homepage">
-          <svg className="w-36.2 h-6" aria-hidden="true">
-            <use xlinkHref="#manage-logo" />
-          </svg>
-        </a>
-        <div>
-          <ul>
-            <li>
-              <a href="#" className="text-white" aria-label="Facebook">
-                <svg className="w-5 h-5" aria-hidden="true">
-                  <use xlinkHref="#social-facebook" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-white" aria-label="YouTube">
-                <svg className="w-5.1 h-5" aria-hidden="true">
-                  <use xlinkHref="#social-youtube" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-white" aria-label="Twitter">
-                <svg className="w-5.1 h-4.5" aria-hidden="true">
-                  <use xlinkHref="#social-twitter" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-white" aria-label="Pinterest">
-                <svg className="w-5 h-5" aria-hidden="true">
-                  <use xlinkHref="#social-pinterest" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-white" aria-label="Instagram">
-                <svg className="w-5.1 h-5" aria-hidden="true">
-                  <use xlinkHref="#social-instagram" />
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <nav>
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Pricing</a>
-            </li>
-            <li>
-              <a href="#">Products</a>
-            </li>
-            <li>
-              <a href="#">About Us</a>
-            </li>
-            <li>
-              <a href="#">Careers</a>
-            </li>
-            <li>
-              <a href="#">Community</a>
-            </li>
-            <li>
-              <a href="#">Privacy Policy</a>
-            </li>
-          </ul>
-        </nav>
-        <form>
-          <div>
-            <input type="text" name="email" id="email" placeholder="Updates in your inbox…" aria-label="Email" />
-            <button type="submit">Go</button>
-          </div>
-        </form>
-        <p>Copyright 2020. All Rights Reserved</p>
-      </div>
-    </footer>
   );
 }
 
