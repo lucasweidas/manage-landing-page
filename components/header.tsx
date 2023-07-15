@@ -5,9 +5,11 @@ import { Device, useDevice } from './device';
 export function Header() {
   return (
     <header>
-      <Device>
-        <Nav />
-      </Device>
+      <div className="mx-auto">
+        <Device>
+          <Nav />
+        </Device>
+      </div>
     </header>
   );
 }
@@ -43,7 +45,7 @@ function Nav() {
         )}
       </div>
       {(isOpen || device === 'desktop') && (
-        <div className="fixed bg-overlay w-full top-0 left-0 min-h-screen px-6 pt-10 gap-10 flex flex-col" onClick={handleOverlayClick}>
+        <div className="fixed bg-overlay w-full top-0 left-0 min-h-screen px-6 pt-10 gap-10 flex flex-col z-50" onClick={handleOverlayClick}>
           {device === 'mobile' && (
             <button className="text-blue-900 self-end" aria-label="Close navigation menu" onClick={toggleNav}>
               <svg className="w-5.1 h-5.5" aria-hidden="true">

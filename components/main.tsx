@@ -4,7 +4,15 @@ import { Carousel } from './carousel';
 export function Main() {
   return (
     <main>
-      <section>
+      <section className="relative">
+        <Image
+          src="/images/bg-tablet-pattern.svg"
+          alt=""
+          width={814}
+          height={814}
+          className="absolute -z-10 -right-14 -top-36 pointer-events-none w-full min-w-[24rem] max-w-lg"
+          aria-hidden="true"
+        />
         <div className="px-4">
           <Image src="/images/illustration-intro.svg" alt="" width={580} height={525} priority aria-hidden="true" />
         </div>
@@ -21,7 +29,15 @@ export function Main() {
           </a>
         </div>
       </section>
-      <section className="mt-24">
+      <section className="mt-24 relative">
+        <Image
+          src="/images/bg-tablet-pattern.svg"
+          alt=""
+          width={814}
+          height={814}
+          className="absolute -z-10 -right-60 -top-96 pointer-events-none w-full min-w-[24rem] max-w-lg"
+          aria-hidden="true"
+        />
         <div className="px-8 text-center">
           <h2 className="text-blue-900 font-bold text-3xl">What’s different about Manage?</h2>
           <p className="text-sm text-gray-400 mt-6 leading-loose">

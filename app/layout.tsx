@@ -19,7 +19,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
       </head>
-      <body className={`${beVietnamPro.variable} font-sans`}>{children}</body>
+      <body className={`${beVietnamPro.variable} font-sans`}>
+        <div className="overflow-hidden">{children}</div>
+      </body>
     </html>
   );
 }
