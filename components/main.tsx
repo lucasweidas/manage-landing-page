@@ -10,14 +10,14 @@ export function Main() {
           alt=""
           width={814}
           height={814}
-          className="absolute -z-10 -right-14 -top-36 pointer-events-none w-full min-w-[24rem] max-w-lg"
+          className="absolute -z-10 -right-14 -top-36 pointer-events-none w-full min-w-[24rem] max-w-lg md:-right-80 md:-top-96 md:max-w-none md:w-auto"
           aria-hidden="true"
         />
         <div className="px-4">
           <Image priority src="/images/illustration-intro.svg" alt="" width={580} height={525} className="mx-auto" aria-hidden="true" />
         </div>
         <div className="text-center px-8">
-          <h1 className="text-blue-900 font-bold text-3.5xl xsm:text-4xl leading-snug">Bring everyone together to build better products.</h1>
+          <h1 className="text-blue-900 font-bold text-3.5xl xsm:text-4xl !leading-snug">Bring everyone together to build better products.</h1>
           <p className="text-gray-400 !leading-loose mt-2 text-2sm xsm:text-base">
             Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.
           </p>
@@ -29,13 +29,13 @@ export function Main() {
           </a>
         </div>
       </section>
-      <section className="mt-24 relative mx-auto max-w-xl">
+      <section className="flex flex-col gap-14 mt-24 relative mx-auto max-w-xl">
         <Image
           src="/images/bg-tablet-pattern.svg"
           alt=""
           width={814}
           height={814}
-          className="absolute -z-10 -right-60 -top-96 pointer-events-none w-full min-w-[24rem] max-w-lg"
+          className="absolute -z-10 -right-60 -top-96 pointer-events-none w-full min-w-[24rem] max-w-lg md:max-w-none md:w-auto md:top-auto md:right-auto md:-bottom-[33rem] md:-left-[40rem]"
           aria-hidden="true"
         />
         <div className="px-8 text-center">
@@ -44,10 +44,10 @@ export function Main() {
             Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.
           </p>
         </div>
-        <div className="px-4 mt-14">
+        <div className="px-4">
           <ul className="flex flex-col gap-11">
             <li className="grid gap-4">
-              <div className="bg-red-50 flex gap-4 items-center rounded-l-2.5xl -mr-4">
+              <div className="max-md:bg-red-50 flex gap-4 items-center rounded-l-2.5xl -mr-4">
                 <span className="bg-red-500 font-bold text-white w-16 h-full flex items-center justify-center rounded-2.5xl shrink-0">01</span>
                 <h3 className="font-bold text-blue-900 pr-4 py-2">Track company-wide progress</h3>
               </div>
@@ -57,7 +57,7 @@ export function Main() {
               </p>
             </li>
             <li className="grid gap-4">
-              <div className="bg-red-50 flex gap-4 items-center rounded-l-2.5xl -mr-4">
+              <div className="max-md:bg-red-50 flex gap-4 items-center rounded-l-2.5xl -mr-4">
                 <span className="bg-red-500 font-bold text-white w-16 h-full flex items-center justify-center rounded-2.5xl shrink-0">02</span>
                 <h3 className="font-bold text-blue-900 pr-4 py-2">Advanced built-in reports</h3>
               </div>
@@ -67,7 +67,7 @@ export function Main() {
               </p>
             </li>
             <li className="grid gap-4">
-              <div className="bg-red-50 flex gap-4 items-center rounded-l-2.5xl -mr-4">
+              <div className="max-md:bg-red-50 flex gap-4 items-center rounded-l-2.5xl -mr-4">
                 <span className="bg-red-500 font-bold text-white w-16 h-full flex items-center justify-center rounded-2.5xl shrink-0">03</span>
                 <h3 className="font-bold text-blue-900 pr-4 py-2">Everything you need in one place</h3>
               </div>
@@ -90,7 +90,7 @@ export function Main() {
         </a>
       </section>
       <section className="mt-11 bg-red-500 text-center px-8 py-24 bg-simplify-sm bg-no-repeat bg-left-center">
-        <h2 className="text-3.5xl xsm:text-4xl font-bold text-white leading-snug">Simplify how your team works today.</h2>
+        <h2 className="text-3.5xl xsm:text-4xl font-bold text-white !leading-snug">Simplify how your team works today.</h2>
         <a
           href="#"
           className="bg-white w-36 h-12 font-bold text-red-500 text-sm rounded-full flex items-center justify-center mx-auto mt-6 hover:brightness-125 hover:grayscale-20 focus-visible:brightness-125 focus-visible:grayscale-20 focus-visible:ring-2 focus-visible:ring-blue-1000 transition-filter outline-none motion-reduce:transition-none"
