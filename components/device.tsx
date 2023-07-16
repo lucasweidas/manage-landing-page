@@ -1,4 +1,6 @@
-import { ReactNode, createContext, useState, Dispatch, SetStateAction, useContext, useEffect } from 'react';
+'use client';
+
+import { ReactNode, createContext, useState, Dispatch, SetStateAction, useContext, useEffect, useLayoutEffect } from 'react';
 
 type device = 'mobile' | 'desktop';
 interface DeviceContextValue {
@@ -19,6 +21,10 @@ export function Device({ children }: { children: ReactNode }) {
 
     mediaQuery.addEventListener('change', handleChange);
     return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  useLayoutEffect(() => {
+    setDevice(window.innerWidth >= 1024 ? 'desktop' : 'mobile');
   }, []);
 
   return (

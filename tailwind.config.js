@@ -25,10 +25,10 @@ module.exports = {
       },
       backgroundImage: {
         overlay: 'linear-gradient(to bottom, hsla(0, 0%, 0%, 0.1) 30%, hsla(0, 0%, 0%, 0.5))',
-        'simplify-sm': 'url("/images/bg-simplify-section-mobile.svg")',
       },
-      backgroundPosition: {
-        'left-center': 'left center',
+      content: {
+        'simplify-sm': 'url("/images/bg-simplify-section-mobile.svg")',
+        'simplify-lg': 'url("/images/bg-simplify-section-desktop.svg")',
       },
       width: {
         5.1: '1.313rem',
