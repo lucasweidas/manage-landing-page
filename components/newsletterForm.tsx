@@ -21,7 +21,7 @@ export function NewsletterForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} className="md:col-span-2">
       <div className="flex flex-col xsm:flex-row gap-2">
         <div className="flex-1 relative">
           <input

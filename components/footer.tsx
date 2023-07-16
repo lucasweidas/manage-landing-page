@@ -3,9 +3,9 @@ import { NewsletterForm } from './newsletterForm';
 export function Footer() {
   return (
     <footer className="bg-blue-1000">
-      <div className="px-6 pt-12 pb-7 grid gap-14 mx-auto max-w-xl">
+      <div className="px-6 pt-12 pb-7 grid gap-14 mx-auto max-w-xl md:px-8 md:max-w-3xl md:grid-cols-2">
         <NewsletterForm />
-        <nav className="grid xsm:grid-cols-2 justify-items-center gap-4">
+        <nav className="grid xsm:grid-cols-2 justify-items-center gap-4 md:row-start-2 md:col-start-2">
           <ul className="flex flex-col gap-4 text-sm text-center xsm:text-start">
             <li>
               <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none">
@@ -46,7 +46,7 @@ export function Footer() {
             </li>
           </ul>
         </nav>
-        <div>
+        <div className="flex flex-col gap-14 items-center md:flex-col-reverse md:justify-between md:row-start-2 md:col-start-1 md:items-start">
           <ul className="flex gap-6 xsm:gap-8 items-center justify-center">
             <li>
               <a
@@ -104,13 +104,13 @@ export function Footer() {
               </a>
             </li>
           </ul>
+          <a href="/" className="text-white" aria-label="Manage Homepage">
+            <svg className="w-36.2 h-6" aria-hidden="true">
+              <use xlinkHref="#manage-logo" />
+            </svg>
+          </a>
         </div>
-        <a href="/" className="text-white block mx-auto w-fit" aria-label="Manage Homepage">
-          <svg className="w-36.2 h-6" aria-hidden="true">
-            <use xlinkHref="#manage-logo" />
-          </svg>
-        </a>
-        <p className="text-gray-400 text-sm text-center">Copyright 2023. All Rights Reserved</p>
+        <p className="text-gray-400 text-sm text-center md:col-span-2">Copyright 2023. All Rights Reserved</p>
       </div>
     </footer>
   );
