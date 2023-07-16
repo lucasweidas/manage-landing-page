@@ -21,14 +21,14 @@ export function NewsletterForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="md:col-span-2">
+    <form onSubmit={handleSubmit(onSubmit)} className="md:max-lg:col-span-2 lg:col-start-4 lg:row-start-1">
       <div className="flex flex-col xsm:flex-row gap-2">
         <div className="flex-1 relative">
           <input
             type="text"
             id="email"
             placeholder="Updates in your inbox…"
-            className={`text-sm text-blue-900 placeholder:text-gray-400 px-6 py-3 rounded-full w-full focus-visible:ring-2 outline-none focus-visible:ring-red-500 relative ${
+            className={`text-sm text-blue-900 placeholder:text-gray-400 px-6 py-3 rounded-full w-full focus-visible:ring-2 outline-none focus-visible:ring-red-500 relative lg:px-4 ${
               errors.email ? 'focus-visible:!ring-red-600' : ''
             }`}
             aria-label="Email"
