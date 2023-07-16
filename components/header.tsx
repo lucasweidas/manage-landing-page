@@ -5,7 +5,7 @@ import { Device, useDevice } from './device';
 export function Header() {
   return (
     <header>
-      <div className="mx-auto">
+      <div className="mx-auto lg:w-min-lg">
         <Device>
           <Nav />
         </Device>
@@ -29,7 +29,7 @@ function Nav() {
   }
 
   return (
-    <nav className="px-6 pt-10 pb-12 md:px-8">
+    <nav className="px-6 pt-10 pb-12 md:px-8 lg:flex lg:justify-between lg:pt-14 lg:pb-28 lg:px-0">
       <div className="flex justify-between items-center">
         <a href="/" className="text-blue-900" aria-label="Manage Homepage">
           <svg className="w-28 h-4.5 lg:w-36.2 lg:h-6" aria-hidden="true">
@@ -39,7 +39,9 @@ function Nav() {
         {device === 'mobile' && !isOpen && (
           <button
             className="text-blue-900 hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none"
-            aria-label="Open navigation menu"
+            aria-label="Open navigation guide"
+            aria-controls="header-nav"
+            aria-pressed={isOpen}
             onClick={toggleNav}
           >
             <svg className="w-6.1 h-4.5" aria-hidden="true">
@@ -49,11 +51,17 @@ function Nav() {
         )}
       </div>
       {(isOpen || device === 'desktop') && (
-        <div className="fixed bg-overlay w-full top-0 left-0 min-h-screen px-6 pt-10 gap-10 flex flex-col z-50 md:px-8" onClick={handleOverlayClick}>
+        <div
+          id="header-guide"
+          className="max-lg:fixed max-lg:bg-overlay max-lg:w-full max-lg:top-0 max-lg:left-0 max-lg:min-h-screen max-lg:px-6 max-lg:pt-10 max-lg:gap-10 flex max-lg:flex-col max-lg:z-50 md:max-lg:px-8"
+          onClick={handleOverlayClick}
+        >
           {device === 'mobile' && (
             <button
               className="text-blue-900 self-end hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none"
-              aria-label="Close navigation menu"
+              aria-label="Close navigation guide"
+              aria-controls="header-guide"
+              aria-pressed={isOpen}
               onClick={toggleNav}
             >
               <svg className="w-5.1 h-5.5" aria-hidden="true">
@@ -61,7 +69,7 @@ function Nav() {
               </svg>
             </button>
           )}
-          <ul className="bg-white flex flex-col gap-7 p-10 items-center rounded-md text-blue-900 font-bold">
+          <ul className="max-lg:bg-white flex max-lg:flex-col gap-7 max-lg:p-10 items-center max-lg:rounded-md text-blue-900 font-bold lg:text-sm">
             <li>
               <a href="#" className="hover:text-gray-400 focus-visible:text-gray-400 transition-colors motion-reduce:transition-none">
                 Pricing
@@ -88,8 +96,15 @@ function Nav() {
               </a>
             </li>
           </ul>
-          {device === 'desktop' && <a href="#">Get Started</a>}
         </div>
+      )}
+      {device === 'desktop' && (
+        <a
+          href="#"
+          className="bg-red-500 w-36 h-12 font-bold text-white text-sm rounded-full flex items-center justify-center shadow-lg shadow-red-500/50 hover:brightness-125 hover:grayscale-20 focus-visible:brightness-125 focus-visible:grayscale-20 focus-visible:ring-2 focus-visible:ring-blue-1000 transition-filter outline-none motion-reduce:transition-non"
+        >
+          Get Started
+        </a>
       )}
     </nav>
   );

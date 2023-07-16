@@ -35,6 +35,7 @@ module.exports = {
         6.1: '1.563rem',
         18: '4.5rem',
         36.2: '9.125rem',
+        'min-lg': 'min(100% - 4rem, 69.5rem)',
       },
       height: {
         4.5: '1.125rem',
