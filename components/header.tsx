@@ -29,7 +29,7 @@ function Nav() {
   }
 
   return (
-    <nav className="px-6 pt-10 pb-12">
+    <nav className="px-6 pt-10 pb-12 md:px-8">
       <div className="flex justify-between items-center">
         <a href="/" className="text-blue-900" aria-label="Manage Homepage">
           <svg className="w-28 h-4.5 lg:w-36.2 lg:h-6" aria-hidden="true">
@@ -49,7 +49,7 @@ function Nav() {
         )}
       </div>
       {(isOpen || device === 'desktop') && (
-        <div className="fixed bg-overlay w-full top-0 left-0 min-h-screen px-6 pt-10 gap-10 flex flex-col z-50" onClick={handleOverlayClick}>
+        <div className="fixed bg-overlay w-full top-0 left-0 min-h-screen px-6 pt-10 gap-10 flex flex-col z-50 md:px-8" onClick={handleOverlayClick}>
           {device === 'mobile' && (
             <button
               className="text-blue-900 self-end hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none"
