@@ -1,12 +1,6 @@
 'use client';
-
-import { ReactNode, createContext, useState, Dispatch, SetStateAction, useContext, useEffect, useLayoutEffect } from 'react';
-
-type device = 'mobile' | 'desktop';
-interface DeviceContextValue {
-  device: device;
-  setDevice?: Dispatch<SetStateAction<device>>;
-}
+import { ReactNode, createContext, useState, useContext, useEffect, useLayoutEffect } from 'react';
+import { DeviceContextValue, device } from '@/interfaces';
 
 const DeviceContext = createContext<DeviceContextValue>({ device: 'mobile' });
 

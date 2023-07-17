@@ -1,12 +1,8 @@
 'use client';
-import { InferType, object, string } from 'yup';
-import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
-
-const schema = object({
-  email: string().email('Please insert a valid email').required('Please insert an email'),
-});
-type FormData = InferType<typeof schema>;
+import { yupResolver } from '@hookform/resolvers/yup';
+import { schema } from '@/schemas/newsletterForm';
+import { FormData } from '@/interfaces';
 
 export function NewsletterForm() {
   const {
