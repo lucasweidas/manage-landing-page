@@ -11,11 +11,11 @@ export function Main() {
           alt=""
           width={814}
           height={814}
-          className="absolute -z-10 -right-14 -top-36 pointer-events-none w-full min-w-[24rem] max-w-lg md:-right-80 md:-top-96 md:max-w-none md:w-auto xl:-right-72 xl:-top-[23rem]"
+          className="absolute -z-10 -right-14 -top-36 w-full min-w-[24rem] max-w-lg md:-right-80 md:-top-96 md:max-w-none md:w-auto"
           aria-hidden="true"
         />
         <div className="px-4 lg:px-0">
-          <Image priority src="/images/illustration-intro.svg" alt="" width={580} height={525} className="mx-auto" aria-hidden="true" />
+          <Image priority src="/images/illustration-intro.svg" alt="" width={580} height={525} className="lg:mx-auto lg:-mr-4" aria-hidden="true" />
         </div>
         <div className="text-center px-8 lg:px-0 lg:text-start lg:max-w-md">
           <h1 className="text-blue-900 font-bold text-3.5xl xsm:text-4xl !leading-snug lg:text-5xl">Bring everyone together to build better products.</h1>
@@ -50,7 +50,7 @@ export function Main() {
             <li className="grid gap-4 lg:grid-cols-[4rem_auto] lg:gap-x-7 lg:gap-y-3">
               <div className="max-md:bg-red-50 flex gap-4 items-center rounded-l-2.5xl -mr-4 lg:col-span-2 lg:gap-7">
                 <span className="bg-red-500 font-bold text-white w-16 h-full flex items-center justify-center rounded-2.5xl shrink-0">01</span>
-                <h3 className="font-bold text-blue-900 pr-4 py-2">Track company-wide progress</h3>
+                <h3 className="font-bold text-blue-900 pr-4 py-2 max-md:text-2sm">Track company-wide progress</h3>
               </div>
               <p className="text-sm text-gray-400 !leading-relaxed lg:col-start-2 lg:text-base">
                 See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of
@@ -60,7 +60,7 @@ export function Main() {
             <li className="grid gap-4 lg:grid-cols-[4rem_auto] lg:gap-x-7 lg:gap-y-3">
               <div className="max-md:bg-red-50 flex gap-4 items-center rounded-l-2.5xl -mr-4 lg:col-span-2 lg:gap-7">
                 <span className="bg-red-500 font-bold text-white w-16 h-full flex items-center justify-center rounded-2.5xl shrink-0">02</span>
-                <h3 className="font-bold text-blue-900 pr-4 py-2">Advanced built-in reports</h3>
+                <h3 className="font-bold text-blue-900 pr-4 py-2 max-md:text-2sm">Advanced built-in reports</h3>
               </div>
               <p className="text-sm text-gray-400 !leading-relaxed lg:col-start-2 lg:text-base">
                 Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need to
@@ -70,7 +70,7 @@ export function Main() {
             <li className="grid gap-4 lg:grid-cols-[4rem_auto] lg:gap-x-7 lg:gap-y-3">
               <div className="max-md:bg-red-50 flex gap-4 items-center rounded-l-2.5xl -mr-4 lg:col-span-2 lg:gap-7">
                 <span className="bg-red-500 font-bold text-white w-16 h-full flex items-center justify-center rounded-2.5xl shrink-0">03</span>
-                <h3 className="font-bold text-blue-900 pr-4 py-2">Everything you need in one place</h3>
+                <h3 className="font-bold text-blue-900 pr-4 py-2 max-md:text-2sm">Everything you need in one place</h3>
               </div>
               <p className="text-sm text-gray-400 !leading-relaxed lg:col-start-2 lg:text-base">
                 Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team

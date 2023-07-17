@@ -2,8 +2,7 @@
 import Image from 'next/image';
 import { MouseEvent, useState } from 'react';
 import { useDevice } from './device';
-
-type Indicator = { id: number };
+import { Indicator } from '@/interfaces';
 
 const INDICATORS: Array<Indicator> = Array(4)
   .fill(null)
