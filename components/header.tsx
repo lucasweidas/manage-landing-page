@@ -68,7 +68,7 @@ function Nav() {
   }
 
   return (
-    <nav className="px-6 pt-10 pb-12 md:px-8 lg:flex lg:justify-between lg:pt-14 lg:pb-28 lg:px-0">
+    <nav id="header-nav" className="px-6 pt-10 pb-12 md:px-8 lg:flex lg:justify-between lg:pt-14 lg:pb-28 lg:px-0">
       <div className="flex justify-between items-center">
         <a href="/" className="text-blue-900" aria-label="Manage Homepage">
           <svg className="w-28 h-4.5 lg:w-36.2 lg:h-6" aria-hidden="true">
@@ -79,7 +79,7 @@ function Nav() {
           <button
             className="text-blue-900 hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none"
             aria-label="Open navigation guide"
-            aria-controls="header-nav"
+            aria-controls="header-guide"
             aria-pressed={isOpen}
             onClick={toggleNav}
           >

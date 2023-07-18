@@ -5,7 +5,10 @@ export function Footer() {
     <footer className="bg-blue-1000">
       <div className="px-6 pt-12 pb-7 grid gap-14 mx-auto max-w-xl md:px-8 md:max-w-3xl md:grid-cols-2 lg:max-w-none lg:w-min-lg lg:px-0 lg:py-14 lg:grid-cols-[repeat(3,1fr)_1.1fr] lg:gap-0">
         <NewsletterForm />
-        <nav className="grid xsm:grid-cols-2 justify-items-center gap-4 md:row-start-2 md:col-start-2 lg:col-span-2 lg:row-start-1 lg:row-span-2 lg:justify-items-start">
+        <nav
+          id="footer-nav"
+          className="grid xsm:grid-cols-2 justify-items-center gap-4 md:row-start-2 md:col-start-2 lg:col-span-2 lg:row-start-1 lg:row-span-2 lg:justify-items-start"
+        >
           <ul className="flex flex-col gap-4 text-sm text-center xsm:text-start">
             <li>
               <a href="#" className="text-white hover:text-red-500 focus-visible:text-red-500 transition-colors motion-reduce:transition-none">
