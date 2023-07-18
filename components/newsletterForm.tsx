@@ -36,7 +36,9 @@ export function NewsletterForm() {
             </span>
           )}
           {errors.email && (
-            <p className="text-red-600 text-xs italic max-xsm:ml-6 max-xsm:mt-2 xsm:left-6 xsm:top-[calc(100%+0.5rem)] xsm:absolute">{errors.email.message}</p>
+            <p className="text-red-600 text-xs italic max-xsm:ml-6 max-xsm:mt-2 xsm:left-6 xsm:top-[calc(100%+0.5rem)] xsm:absolute lg:left-4">
+              {errors.email.message}
+            </p>
           )}
         </div>
         <button
