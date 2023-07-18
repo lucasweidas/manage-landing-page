@@ -77,14 +77,13 @@ export function Carousel() {
           </li>
         </ul>
       </div>
-      <ul className="mt-6 flex gap-1.5 justify-center items-center" role="tablist">
+      <ul className="mt-6 flex gap-1.5 justify-center items-center">
         {INDICATORS.map(({ id }) => (
           <li key={id} className="inline-flex">
             <button
-              role="tab"
-              className="appearance-none w-2.5 h-2.5 rounded-full border border-red-500 hover:border-blue-900 aria-selected:bg-red-500 focus-visible:border-blue-900 hover:aria-selected:border-red-500/80 hover:aria-selected:bg-red-500/80 cursor-pointer outline-none transition-colors motion-reduce:transition-none"
+              className="appearance-none w-2.5 h-2.5 rounded-full border border-red-500 hover:border-blue-900 aria-pressed:bg-red-500 focus-visible:border-blue-900 hover:aria-pressed:border-red-500/80 hover:aria-pressed:bg-red-500/80 cursor-pointer outline-none transition-colors motion-reduce:transition-none"
               aria-labelledby={`carousel-title-${id}`}
-              aria-selected={selectedId === id}
+              aria-pressed={selectedId === id}
               data-carousel-button={id}
               onClick={handleTabChange}
             />
