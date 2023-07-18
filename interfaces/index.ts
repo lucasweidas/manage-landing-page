@@ -1,5 +1,5 @@
 import { schema } from '@/schemas/newsletterForm';
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, RefObject, SetStateAction } from 'react';
 import { InferType } from 'yup';
 
 export type device = 'mobile' | 'desktop';
@@ -18,3 +18,8 @@ export interface NavGuideProps {
 export type Indicator = { id: number };
 
 export type FormData = InferType<typeof schema>;
+
+export interface UseScrollSliderProps {
+  sliderRef: RefObject<HTMLElement>;
+  setSelectedId: Dispatch<SetStateAction<number>>;
+}

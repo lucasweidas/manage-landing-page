@@ -1,27 +1,30 @@
 'use client';
 import Image from 'next/image';
-import { MouseEvent, useState } from 'react';
+import { MouseEvent, useEffect, useRef, useState } from 'react';
 import { useDevice } from './device';
-import { Indicator } from '@/interfaces';
+import { Indicator, UseScrollSliderProps } from '@/interfaces';
 
 const INDICATORS: Array<Indicator> = Array(4)
   .fill(null)
   .map((_, i) => ({ id: i }));
 
 export function Carousel() {
-  const [selectedId, setSeletedId] = useState(0);
+  const [selectedId, setSelectedId] = useState(0);
   const { device } = useDevice();
   const translateX = getTranslateX(selectedId, device === 'desktop');
+  const sliderRef = useRef<HTMLDivElement>(null);
 
   function handleTabChange({ currentTarget }: MouseEvent<HTMLButtonElement>) {
     const id = +currentTarget.dataset.carouselButton!;
-    setSeletedId(id);
+    setSelectedId(id);
   }
+
+  useScrollSlider({ sliderRef, setSelectedId });
 
   return (
     <div className="pt-24 overflow-hidden">
-      <div className="lg:flex lg:items-center lg:justify-center">
-        <ul className={`flex ${translateX} transition-transform duration-700 gap-4 motion-reduce:transition-none lg:gap-8 lg:w-[33.75rem]`}>
+      <div className="lg:flex lg:items-center lg:justify-center cursor-grab" ref={sliderRef}>
+        <ul className={`flex ${translateX} transition-transform duration-700 gap-4 motion-reduce:transition-none lg:gap-8 lg:w-[33.75rem] pointer-events-none`}>
           <li className="flex-carousel-item px-6 bg-neutral-50 relative pt-16 pb-11 rounded-md lg:px-10">
             <Image src="/images/avatar-anisha.png" alt="Anisha Li" width={144} height={144} className="w-18 h-18 absolute -top-9 left-2/4 -translate-x-2/4" />
             <h3 className="font-bold text-blue-900" id="carousel-title-0">
@@ -104,4 +107,88 @@ function getTranslateX(id: number, isDesktop: boolean) {
     default:
       return '';
   }
+}
+
+function useScrollSlider({ sliderRef, setSelectedId }: UseScrollSliderProps) {
+  const isDown = useRef(false);
+  const startX = useRef(0);
+  const currX = useRef(0);
+
+  useEffect(() => {
+    if (!sliderRef.current) return;
+    const slider = sliderRef.current;
+
+    function handleDown(e: globalThis.MouseEvent | TouchEvent) {
+      e.preventDefault();
+      if (!sliderRef.current) return;
+
+      const target = e.target as HTMLElement;
+      const targetRect = target.getBoundingClientRect();
+      const bodyRect = document.body.getBoundingClientRect();
+      const { pageX } = 'changedTouches' in e ? e.changedTouches[0] : e;
+      const x = pageX - (targetRect.left - bodyRect.left);
+
+      isDown.current = true;
+      startX.current = x;
+      currX.current = x;
+    }
+
+    function handleUp(e: globalThis.MouseEvent | TouchEvent) {
+      e.preventDefault();
+      if (!sliderRef.current) return;
+
+      const division = Math.trunc(sliderRef.current.offsetWidth / 4);
+      const breakPoint = division > 60 ? 60 : division;
+      const traveled = startX.current - currX.current;
+
+      if (traveled >= breakPoint) {
+        setSelectedId(selectedId => (selectedId === 3 ? 0 : selectedId + 1));
+      } else if (traveled <= -breakPoint) {
+        setSelectedId(selectedId => (selectedId === 0 ? 3 : selectedId - 1));
+      }
+      isDown.current = false;
+      startX.current = 0;
+      currX.current = 0;
+    }
+
+    function handleMove(e: globalThis.MouseEvent | TouchEvent) {
+      e.preventDefault();
+      if (!isDown.current || !sliderRef.current) return;
+
+      const target = e.target as HTMLElement;
+      const targetRect = target.getBoundingClientRect();
+      const bodyRect = document.body.getBoundingClientRect();
+      const { pageX } = 'changedTouches' in e ? e.changedTouches[0] : e;
+      const x = pageX - (targetRect.left - bodyRect.left);
+
+      currX.current = x;
+    }
+
+    function handleLeave(e: globalThis.MouseEvent) {
+      e.preventDefault();
+      isDown.current = false;
+      startX.current = 0;
+      currX.current = 0;
+    }
+
+    slider.addEventListener('touchstart', handleDown);
+    slider.addEventListener('touchend', handleUp);
+    slider.addEventListener('touchmove', handleMove);
+
+    slider.addEventListener('mousedown', handleDown);
+    slider.addEventListener('mouseup', handleUp);
+    slider.addEventListener('mousemove', handleMove);
+    slider.addEventListener('mouseleave', handleLeave);
+
+    return () => {
+      slider.removeEventListener('touchstart', handleDown);
+      slider.removeEventListener('touchend', handleUp);
+      slider.removeEventListener('touchmove', handleMove);
+
+      slider.removeEventListener('mousedown', handleDown);
+      slider.removeEventListener('mouseup', handleUp);
+      slider.removeEventListener('mousemove', handleMove);
+      slider.removeEventListener('mouseleave', handleLeave);
+    };
+  }, [sliderRef, setSelectedId]);
 }
