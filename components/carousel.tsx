@@ -22,7 +22,7 @@ export function Carousel() {
   useScrollSlider({ sliderRef, setSelectedId });
 
   return (
-    <div className="pt-24 overflow-hidden">
+    <div className="pt-24 overflow-hidden lg:mx-auto lg:max-w-[105.25rem]">
       <div className="lg:flex lg:items-center lg:justify-center cursor-grab" ref={sliderRef}>
         <ul className={`flex ${translateX} transition-transform duration-700 gap-4 motion-reduce:transition-none lg:gap-8 lg:w-[33.75rem] pointer-events-none`}>
           <li className="flex-carousel-item px-6 bg-neutral-50 relative pt-16 pb-11 rounded-md lg:px-10">
