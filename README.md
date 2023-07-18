@@ -24,7 +24,7 @@ This is a solution to the [Manage landing page challenge on Frontend Mentor](htt
 ### Links
 
 - Solution URL: [github.com/lucasweidas/manage-landing-page](https://github.com/lucasweidas/manage-landing-page)
-- Live Site URL: [manage-landing-page.vercel]()
+- Live Site URL: [manage-landing-page.vercel](https://manage-landing-page-eosin-two.vercel.app/)
 
 ## My process
 
