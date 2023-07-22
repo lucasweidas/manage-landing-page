@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { MouseEvent, useState } from 'react';
+import { MouseEvent, useCallback, useEffect, useState } from 'react';
 import {
   AnimatePresence,
   Variants,
@@ -68,10 +68,16 @@ function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const { device } = useDevice();
 
-  function toggleMobileGuide() {
-    setIsOpen(!isOpen);
+  const toggleMobileGuide = useCallback(() => {
+    setIsOpen(isOpen => !isOpen);
     document.body.classList.toggle('overflow-hidden');
-  }
+  }, []);
+
+  useEffect(() => {
+    if (device === 'desktop' && isOpen) {
+      toggleMobileGuide();
+    }
+  }, [device, isOpen, toggleMobileGuide]);
 
   return (
     <nav
