@@ -1,5 +1,5 @@
 import { schema } from '@/schemas/newsletterForm';
-import { Dispatch, RefObject, SetStateAction } from 'react';
+import { Dispatch, ReactNode, RefObject, SetStateAction } from 'react';
 import { InferType } from 'yup';
 
 export type device = 'mobile' | 'desktop';
@@ -9,10 +9,10 @@ export interface DeviceContextValue {
   setDevice?: Dispatch<SetStateAction<device>>;
 }
 
-export interface NavGuideProps {
+export interface MobileGuideWrapperProps {
+  children: ReactNode;
   isOpen: boolean;
-  toggleNav: () => void;
-  device: 'mobile' | 'desktop';
+  onToggle: () => void;
 }
 
 export type Indicator = { id: number };
