@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./pages/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}', './app/**/*.{js,ts,jsx,tsx,mdx}'],
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -24,7 +28,9 @@ module.exports = {
         },
       },
       backgroundImage: {
-        overlay: 'linear-gradient(to bottom, hsla(0, 0%, 0%, 0.1) 30%, hsla(0, 0%, 0%, 0.5))',
+        overlay:
+          'linear-gradient(to bottom, hsla(0, 0%, 0%, 0.1) 30%, hsla(0, 0%, 0%, 0.5))',
+        'tablet-pattern': 'url("/images/bg-tablet-pattern.svg")',
       },
       content: {
         'simplify-sm': 'url("/images/bg-simplify-section-mobile.svg")',
